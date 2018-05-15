@@ -23,7 +23,7 @@ public class MyBockingQueue<T> {
             }
 
             queue.addLast(t);
-            queue.notify();
+            queue.notifyAll();
         }
     }
 
@@ -40,7 +40,7 @@ public class MyBockingQueue<T> {
             }
 
             t = queue.removeFirst();
-            queue.notify();
+            queue.notifyAll();
         }
         return t;
     }
